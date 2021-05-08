@@ -1,10 +1,12 @@
 Kafka can be downloaded from https://kafka.apache.org/downloads.
 Version used for the below use case 
-    • kafka_2.11-0.8.2.1.tgz
-    • jdk-8u144-linux-x64.tar.gz
+    • kafka_2.11-0.8.2.1
+    • jdk1.8.0_144
     • python 2.7
-
-
+    • spark-streaming-kafka-0-8-assembly_2.11-2.3.1.jar(downloaded from maven)
+    • kafka-clients-0.10.0.1.jar
+    • spark-sql-kafka-0-10_2.11-2.3.1.jar
+    
 untar kafka by below command-
 
 tar -zxvf kafka_2.11-0.8.2.1.tgz -C $HOME
@@ -22,3 +24,10 @@ bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 -
 
 Listing the topic:
 bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+Pyspark with Kafka Integration
+-------------------------------
+Place the spark-streaming-kafka-0-8-assembly_2.11-2.3.1.jar,kafka-clients-0.10.0.1.jar,spark-sql-kafka-0-10_2.11-2.3.1.jar to /home/chandramoulin/spark-2.3.1-bin-hadoop2.7/jars(spark installed path) or mention the jar path --jars over spark command
+
+
+
