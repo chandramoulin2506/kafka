@@ -1,0 +1,24 @@
+Kafka can be downloaded from https://kafka.apache.org/downloads.
+Version used for the below use case 
+    • kafka_2.11-0.8.2.1.tgz
+    • jdk-8u144-linux-x64.tar.gz
+    • python 2.7
+
+
+untar kafka by below command-
+
+tar -zxvf kafka_2.11-0.8.2.1.tgz -C $HOME
+cd kafka_2.10-0.8.2.0
+
+Steps to start the zookeeper and kafka,
+Kafka relies on Zookeeper, in order to make it run we will have to run Zookeeper first.
+
+nohup bin/zookeeper-server-start.sh config/zookeeper.properties &
+nohup bin/kafka-server-start.sh config/server.properties &
+
+Topic creation:
+
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+
+Listing the topic:
+bin/kafka-topics.sh --list --zookeeper localhost:2181
