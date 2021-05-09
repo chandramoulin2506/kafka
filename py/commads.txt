@@ -1,16 +1,16 @@
 Kafka can be downloaded from https://kafka.apache.org/downloads.
 Version used for the below use case 
-    • kafka_2.11-0.8.2.1
+    • kafka_2.11-0.10.2.2
     • jdk1.8.0_144
     • python 2.7
     • spark-streaming-kafka-0-8-assembly_2.11-2.3.1.jar(downloaded from maven)
-    • kafka-clients-0.10.0.1.jar
+    • kafka-clients-0.10.2.2.jar
     • spark-sql-kafka-0-10_2.11-2.3.1.jar
     
 untar kafka by below command-
 
-tar -zxvf kafka_2.11-0.8.2.1.tgz -C $HOME
-cd kafka_2.10-0.8.2.0
+tar -zxvf kafka_2.11-0.10.2.2.tgz -C $HOME
+cd kafka_2.11-0.10.2.2
 
 Steps to start the zookeeper and kafka,
 Kafka relies on Zookeeper, in order to make it run we will have to run Zookeeper first.
@@ -27,7 +27,4 @@ bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 Pyspark with Kafka Integration
 -------------------------------
-Place the spark-streaming-kafka-0-8-assembly_2.11-2.3.1.jar,kafka-clients-0.10.0.1.jar,spark-sql-kafka-0-10_2.11-2.3.1.jar to /home/chandramoulin/spark-2.3.1-bin-hadoop2.7/jars(spark installed path) or mention the jar path --jars over spark command
-
-
-
+Place the spark-streaming-kafka-0-8-assembly_2.11-2.3.1.jar,kafka-clients-0.10.2.2.jar,spark-sql-kafka-0-10_2.11-2.3.1.jar to /home/chandramoulin/spark-2.3.1-bin-hadoop2.7/jars(spark installed path) or mention the jar path --jars over spark command
